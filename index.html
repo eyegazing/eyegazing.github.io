@@ -24,103 +24,49 @@ body,td,th {
 
 <body>
 <center>
-  <p align="center" class="TITLE">Dataset for &quot;Cloud-assisted Crowdsourced Livecast &quot;</p>
+  <p align="center" class="TITLE">Dataset for &quot;Beyond the Touch: Interaction-Aware Mobile Gamecasting </p>
+  <p align="center" class="TITLE">with Gazing Pattern Prediction&quot;</p>
   <p><strong>NOTE: The datasets presented below are for academic use only.</strong></p>
 <table width="800" border="0">
     <tr>
       <td>
         <p align="left" class="SECTION">Introduction</p>
-        <p align="left">The crawled data are continually collected from Twitch every five minutes in a one-month period (Feb. 1st-28th, 2015). Through the official <a href="http://dev.twitch.tv/">APIs</a>, our multi-thread <a href="https://www.dropbox.com/sh/2b1v9iuogfdzldr/AACnVBCi3n8TCeeMTAHYFgCTa?dl=0">crawler</a> obtained information from each broadcaster and the <a href="https://stats.twitchapps.com">official system dashboard</a>. The crawler does not need Twitch's API client-ID and avoids the limitation for the maximum number of objects to return in each request.</p>
-        <p align="left"><a href="https://www.dropbox.com/s/vsbzeh69ddjpqx6/broadcaster.rar?dl=0">Broadcasters list</a></p>
+        <p align="left">To collect user's touch data, we install the Android Debug Bridge (<a href="https://developer.android.com/studio/command-line/adb.html">ADB</a>) on a desktop PC (DELL Optiplex 7010) that connects to a mobile phone (Samsung Galaxy S5 with Android 6.0.1). To collect user's gazing data, we choose <a href="http://tobiigaming.com/product/tobii-eyex/">Tobii eyeX</a> as the eye-tracking device to collect the users' gazing data due to its affordable price, suitable sampling rate, and high accuracy. It is connected to a desktop PC (DELL Optiplex 7010) through USB 3.0 port and attached to the frame of a 27-inch monitor (DELL U2715H). We will realease all dataset after finishing the instruction. Currently, we only provide samples, if you need full dataset, please send email to us. </p>
+        <p align="left"><a href="mailto: congz@sfu.ca">Touch dataset</a> (<a href="https://drive.google.com/file/d/0B4HK4KUlSJtBN056VXJybi1COFU/view?usp=sharing">Sample</a>) </p>
         <table width="600" border="1">
           <tr>
-            <td width="184">all_broadcaster_dict.txt </td>
-            <td width="400">the ID list of all broadcasters </td>
+            <td width="184">timestamp</td>
+            <td width="400">the time of this trace</td>
           </tr>
           <tr>
-            <td>ps_broadcaster_dict.txt </td>
-            <td>the ID list of PS4 broadcasters </td>
+            <td>event type</td>
+            <td>a string of current event type</td>
           </tr>
           <tr>
-            <td>xbox_broadcaster_dict.txt </td>
-            <td>the ID list of XBox broadcasters </td>
+            <td>event</td>
+            <td>a string of multi-touch event</td>
+          </tr>
+          <tr>
+            <td>value</td>
+            <td>a value of this event</td>
           </tr>
         </table>
-        <p align="left"><a href="https://drive.google.com/open?id=0B4HK4KUlSJtBU1M2YmN6aFo2dVk">Twitch dataset</a> (<a href="https://www.dropbox.com/s/p6po06nl6qpuesp/twitch_sample.rar?dl=0">Sample</a>) </p>
+        <p><a href="mailto: congz@sfu.ca">Gazing dataset</a> (<a href="https://drive.google.com/file/d/0B4HK4KUlSJtBR0podnZ2UW5QZW8/view?usp=sharing">Sample</a>)        </p>
         <table width="600" border="1">
           <tr>
-            <td width="184">stream ID </td>
-            <td width="400">a string of stream ID, which is unique</td>
+            <td width="243">X coordinate </td>
+            <td width="341">the value of x coordinate on the screen</td>
           </tr>
           <tr>
-            <td>current views</td>
-            <td>an integer number of current viewer </td>
+            <td>Y coordinate </td>
+            <td width="341">the value of y coordinate on the screen</td>
           </tr>
           <tr>
-            <td> stream created time</td>
-            <td> a time of starting time of this stream </td>
-          </tr>
-          <tr>
-            <td>game name</td>
-            <td>a string of game name </td>
-          </tr>
-          <tr>
-            <td>broadcaster ID</td>
-            <td>a string of broadcaster ID, which is unique</td>
-          </tr>
-          <tr>
-            <td>broadcaster name</td>
-            <td>a string of broadcaster's name </td>
-          </tr>
-          <tr>
-            <td>delay setting</td>
-            <td>an integer number of the broadcaster's delay setting </td>
-          </tr>
-          <tr>
-            <td>follower number</td>
-            <td>an integer number of the followers </td>
-          </tr>
-          <tr>
-            <td>partner status</td>
-            <td>an integer number of the comments</td>
-          </tr>
-          <tr>
-            <td>broadcaster language</td>
-            <td>a string of broadcaster's languate </td>
-          </tr>
-		  <tr>
-            <td>total views of this broadcaster</td>
-            <td>an integer number of total viewers of the broadcaster </td>
-          </tr>
-		  <tr>
-            <td>language</td>
-            <td>a string of the language of the broadcaster's website </td>
-          </tr><tr>
-            <td> broadcaster's created time</td>
-            <td>a time of sign up of the broadcaster</td>
-          </tr><tr>
-            <td>playback bitrate</td>
-            <td>a float number of the playback bitrate</td>
-          </tr><tr>
-            <td>source resolution</td>
-            <td>a string of source resolution </td>
+            <td>timestamp</td>
+            <td>the time of this trace</td>
           </tr>
         </table>
-        <p><a href="https://drive.google.com/open?id=0B4HK4KUlSJtBUEc3R2c2MVRxVmM">Official dashboard information</a> (<a href="https://www.dropbox.com/s/kgzmuzo0o996xus/dashboard_sample.rar?dl=0">Sample</a>) </p>
-        <table width="600" border="1">
-          <tr>
-            <td width="243">categorydata.txt</td>
-            <td width="341">the information on system dashboard </td>
-          </tr>
-          <tr>
-            <td>channeldata.txt</td>
-            <td>the information on broadcaster dashboard</td>
-          </tr>
-          <tr>
-            <td>gamesdata.txt</td>
-            <td>the information on game dashboard</td>
-          </tr>
-        </table></td>
+        <p>&nbsp;</p></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
